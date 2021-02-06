@@ -1,0 +1,188 @@
+\usepackage{setspace}
+\usepackage[backend=biber,style=nature]{biblatex}
+\renewcommand*{\cite}[1]{\footnote[frame]{\fullcite{#1}}}
+% \usepackage[english]{babel}
+
+% Title page settings
+\setbeamerfont{title}{family=\rmfamily, series=\bfseries, size={\fontsize{18}{18}}}
+\setbeamerfont{subtitle}{family=\rmfamily, series=\bfseries, size={\fontsize{15}{15}}}
+% \setbeamerfont{normal text}{family=\sffamily}
+\setbeamerfont{frametitle}{size={\fontsize{16}{16}}}
+\setbeamerfont{block title}{size={\fontsize{16}{16}}}
+\setbeamerfont{author}{size={\fontsize{5}{5}}}
+\setbeamerfont{institute}{size={\fontsize{5}{5}}}
+\setbeamerfont{id}{size={\fontsize{5}{5}}}
+\setbeamerfont{supervisor}{size={\fontsize{5}{5}}}
+\setbeamerfont{date}{size={\fontsize{5}{5}}}
+% TOC page settings
+\setbeamerfont{section in toc}{series=\bfseries, size={\fontsize{12}{12}}}
+\setbeamerfont{subsection in toc}{size={\fontsize{10}{10}}}
+\setbeamerfont{section number projected}{family=\usebeamerfont{section in toc}}
+\setbeamerfont{subsection number projected}{family=\usebeamerfont{subsection in toc}}
+% Content pages settings
+\setbeamerfont{caption}{size={\fontsize{12}{12}}}
+\setbeamerfont{footnote}{family=\rmfamily, size={\fontsize{5}{5}}}
+\setbeamerfont{itemize/enumerate body}{size={\fontsize{14}{14}}}
+\setbeamerfont{itemize/enumerate subbody}{size={\fontsize{12}{12}}}
+\setbeamerfont{alerted text}{size={\fontsize{5}{5}}}
+
+
+\definecolor{ustGold}{RGB}{153,102,0}
+\definecolor{ustBlue}{RGB}{0,51,102}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{block body}{bg=normal text.bg!90!black}
+\setbeamercolor{block title}{bg=ustBlue, fg=white}
+\setbeamercolor{frametitle}{fg=ustBlue}
+\setbeamercolor{title}{bg=ustBlue, fg=white}
+\setbeamercolor{subtitle}{bg=ustBlue, fg=white}
+\setbeamercolor{structure}{fg=ustBlue, bg=ustGold}
+\setbeamercolor{footnote}{fg=ustBlue, bg=black}
+\setbeamercolor{footnote mark}{fg=ustGold, bg=black}
+\setbeamercolor{itemize item}{fg=ustBlue, bg=black}
+\setbeamercolor{itemize subitem}{fg=ustGold, bg=black}
+\setbeamercolor{section number projected}{bg=ustBlue,fg=white}
+\setbeamercolor{subsection number projected}{bg=ustBlue,fg=white}
+\setbeamercolor{alerted text}{fg=red}
+
+
+\setbeamertemplate{footline}[page number]{}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{block title}[rounded]
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+
+\setbeamertemplate{title page}
+{
+    \begin{spacing}{1.0}
+    \vskip10pt\hskip-10pt
+    \includegraphics[width=0.25\paperwidth]{logo/HKUST_LogoAndName.png}
+    \vskip-28pt\hskip20pt
+    \vskip-5pt
+    \end{spacing}
+    \vfill
+    \vskip10pt\hskip-10pt
+    \vskip20pt
+    \hfill
+    \begin{beamercolorbox}[rounded=true,wd=0.75\paperwidth,shadow=true]{title}
+        %\centering\begin{spacing}{1}\usebeamerfont{title}\inserttitle\end{spacing}
+        \centering\usebeamerfont{title}\inserttitle
+    \end{beamercolorbox}
+    \hfill\hfill
+    \vskip25pt
+
+    \renewcommand\arraystretch{1.25}
+    \begin{center}
+    \begin{tabular}{c}
+     \insertauthor  \\
+     Supervisor: \insertsupervisor \\
+     \insertinstitute \\
+     \insertdate
+    \end{tabular}
+    \end{center}
+}
+\renewcommand*{\thanks}
+{
+    \begin{spacing}{1.0}
+    \vskip10pt\hskip-10pt
+    \includegraphics[width=0.25\paperwidth]{logo/HKUST_LogoAndName.png}
+    \vskip-28pt\hskip20pt
+    \vskip-5pt
+    \end{spacing}
+    \vfill
+    \vskip10pt\hskip-10pt
+    \vskip20pt
+    \hfill
+    \begin{beamercolorbox}[rounded=true,wd=0.75\paperwidth,shadow=true]{title}
+        %\centering\begin{spacing}{1}\usebeamerfont{title}\inserttitle\end{spacing}
+        \centering\usebeamerfont{title} Thank you!
+    \end{beamercolorbox}
+    \hfill\hfill
+    \vskip25pt
+
+    \renewcommand\arraystretch{1.25}
+    \begin{center}
+    \begin{tabular}{c}
+     \insertauthor  \\
+     Supervisor: \insertsupervisor \\
+     \insertinstitute \\
+     \insertdate
+    \end{tabular}
+    \end{center}
+}
+\setbeamertemplate{frametitle}
+{
+    \begin{spacing}{1.0}
+    \vskip10pt\hskip-15pt
+    \includegraphics[height=20pt]{logo/HKUST_Logo.png}
+    \vskip-28pt\hskip20pt
+    \usebeamerfont{title}\usebeamercolor{title}\insertframetitle
+    \vskip-10pt\noindent\hskip10pt\rule{0.95\textwidth}{1pt}
+    \phantom{xx}\usebeamerfont{subtitle}\usebeamercolor{subtitle}\insertframesubtitle
+    \vskip-5pt
+    \end{spacing}
+}
+\setbeamertemplate{headline}{}
+
+
+\newcommand{\id}[1]{\newcommand{\insertid}{#1}}
+\newcommand{\supervisor}[1]{\newcommand{\insertsupervisor}{#1}}
+\newcommand*{\makecontents}
+{
+    \begin{spacing}{1}
+    \hfill
+    \parbox[t]{.95\textwidth}
+    {
+        \begin{minipage}[c][0.75\textheight]{\textwidth}
+            \tableofcontents
+        \end{minipage}
+    }
+    \end{spacing}
+}
+\AtBeginSection[]
+{
+    \begin{frame}
+        \frametitle{Contents}
+        \begin{spacing}{1}
+            \hfill
+            \parbox[t]{.95\textwidth}
+            {
+                \begin{minipage}[c][0.75\textheight]{\textwidth}
+                    \tableofcontents[currentsection]
+                \end{minipage}
+            }
+        \end{spacing}
+    \end{frame}
+}
+\iffalse
+\AtBeginSubsection[]
+{
+    \begin{frame}
+        \frametitle{Contents}
+        \begin{spacing}{1}
+            \hfill
+            \parbox[t]{.95\textwidth}
+            {
+                \begin{minipage}[c][0.75\textheight]{\textwidth}
+                    \tableofcontents[currentsection,currentsubsection]
+                \end{minipage}
+            }
+        \end{spacing}
+    \end{frame}
+}
+\AtBeginSubsubsection[]
+{
+    \begin{frame}
+        \frametitle{Contents}
+        \begin{spacing}{1}
+            \hfill
+            \parbox[t]{.95\textwidth}
+            {
+                \begin{minipage}[c][0.75\textheight]{\textwidth}
+                    \tableofcontents[currentsection,currentsubsection,subsubsectionstyle=show/shaded]
+                \end{minipage}
+            }
+        \end{spacing}
+    \end{frame}
+}
+\fi

@@ -1,0 +1,60 @@
+% !Mode:: "TeX:UTF-8"
+% !TEX program  = xelatex
+\documentclass[handout, aspectratio=1610, 14pt]{beamer}
+\usepackage{amsmath, amssymb, bm, blindtext, braket, dsfont, extarrows, footmisc, graphicx, lipsum, siunitx, style, url, xcolor}
+
+\usefonttheme{serif}
+\usefonttheme{professionalfonts}
+
+\addbibresource{ref.bib}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Some self-defined aliases. Feel free to delete or modify them.
+\newcommand{\operator}[1]{\hat{\bm{#1}}}
+\newcommand{\hl}[2]{\colorbox{#1}{#2}}
+\newcommand{\OD}{\text{OD}}
+\newcommand{\itmspace}{\vspace{5pt}}
+\renewcommand{\Im}[1]{\operatorname{Im}{\{#1\}}}
+\renewcommand{\Re}[1]{\operatorname{Re}{\{#1\}}}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\title{Your Defense Title}
+\author{\texorpdfstring{Your~Name\\{\scriptsize \url{name@connect.ust.hk}}}{Your~Name}}
+\supervisor{Prof.~Your~Supervisor}
+\institute{Department of Physics, HKUST}
+\date{2020/11/30}
+
+% Title Page
+\frame{\titlepage}
+
+% TOC Page
+\begin{frame}
+\frametitle{Contents}
+\makecontents
+\end{frame}
+
+% Section: Introduction
+\input{section/sec-1-Introduction.tex}
+
+% Section: Theory
+\input{section/sec-2-Theory.tex}
+
+% Section: System
+\input{section/sec-3-System.tex}
+
+% Section: Experiment
+\input{section/sec-4-Experiment.tex}
+
+% Section: Conclusion
+\input{section/sec-5-Conclusion.tex}
+
+% Section: Appendix
+\input{section/sec-6-Appendix.tex}
+
+% Ending Page
+\begin{frame}
+\thanks
+\end{frame}
+
+\end{document}
